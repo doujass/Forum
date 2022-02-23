@@ -1,23 +1,20 @@
 package br.com.alura.forum.controller.form;
 
-import br.com.alura.forum.modelo.Curso;
 import br.com.alura.forum.modelo.Topico;
-import br.com.alura.forum.repository.CursoRepository;
 import br.com.alura.forum.repository.TopicoRepository;
 import org.hibernate.validator.constraints.Length;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
-public class TopicoForm {
+public class AtualizacaoTopicoForm {
 
-    @NotNull @NotEmpty @Length(min = 5)
+    @NotNull
+    @NotEmpty
+    @Length(min = 5)
     private String titulo;
     @NotNull @NotEmpty @Length(min = 10)
     private String mensagem;
-    @NotNull @NotEmpty @Length
-    private String nomeCurso;
 
     public String getTitulo() {
         return titulo;
@@ -35,16 +32,12 @@ public class TopicoForm {
         this.mensagem = mensagem;
     }
 
-    public String getNomeCurso() {
-        return nomeCurso;
-    }
+    public Topico atualizar(Long id, TopicoRepository topicoRepository) {
 
-    public void setNomeCurso(String nomeCurso) {
-        this.nomeCurso = nomeCurso;
-    }
+        Topico topico = topicoRepository.getOne(id);
 
-    public Topico converter(CursoRepository cursoRepository) {
-        Curso curso = cursoRepository.findByNome(nomeCurso);
-        return new Topico(titulo, mensagem, curso);
+        topico.setTitulo(this.titulo);
+        topico.setMensagem(this.mensagem);
+        return topico;
     }
 }
