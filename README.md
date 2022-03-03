@@ -3,15 +3,10 @@ CRUD para realização de procedimentos em fórum de dúvidas
 
 ### 📋 Pré-requisitos
 
-JAVA JDK;
-Spring Boot;
-Postman;
-Instalar no pom.xml as dependencias do H2DataBase:
-
-<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-		</dependency>
+JAVA JDK.
+Spring Boot.
+Postman.
+Instalar no pom.xml as dependencias do H2DataBase.
 
 
 ## ⚙️ Executando os testes
