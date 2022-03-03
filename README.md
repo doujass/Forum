@@ -6,7 +6,7 @@ CRUD para realização de procedimentos em fórum de dúvidas
 JAVA JDK.
 Spring Boot.
 Postman.
-Instalar no pom.xml as dependencias do H2DataBase.
+H2DataBase.
 
 
 ## ⚙️ Executando os testes
