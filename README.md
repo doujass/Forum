@@ -24,6 +24,5 @@ Mencione as ferramentas que você usou para criar seu projeto
 
 ## ✒️ Autores
 
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
 
 * **Douglas de Oliveira Augusto** - *Trabalho do inicio ao fim* - [Douglas](https://github.com/doujass)
